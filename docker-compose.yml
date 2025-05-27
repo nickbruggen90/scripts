@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  librenms:
+    image: librenms/librenms:latest
+    container_name: librenms
+    hostname: librenms
+    ports:
+      - "80:80"
+      - "514:514/udp"
+    environment:
+      TZ: UTC
+      PUID: 1000
+      PGID: 1000
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
