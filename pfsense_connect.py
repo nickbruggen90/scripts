@@ -1,3 +1,4 @@
+#This script parses device inforamation using Python and Paramiko
 import paramiko
 
 hostname = '192.168.83.100'
